@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-blog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            background-color: rgb(211, 211, 211);
+            width: 75%;
+            height: 100%;
+            margin-left: 165px;
+        }
+        .header {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            height: 20%;
+            padding: 1%;
+        }
+        .header h1{
+            font-size: 2.5em;
+            width: 5.8em;
+            margin: 1.5em;
+        }
+        ul li{
+            display: inline-block;
+            margin: 0 1em;
+        }
+        a{
+            color: white;
+        }
+
+        
+        .home{
+            height: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25em;
+        }
+        .home > .fbg h1{
+            margin-left: 30px;
+        }
+        .blog {          
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction:column;
+            align-items: center;
+            position: relative;
+        }
+        .blog .blog-p:first-child{
+            background-color: rgb(231, 231, 231);
+            width: 100%;
+        }
+        
+        .blog-p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blogs img{
+            width: 100%;
+            height: 100%;
+        }
+        .blogs{
+            margin: 2em;
+        }
+        .blogs > h4, p{
+            padding: 0.3em;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input, textarea{
+            padding: 3px;
+        }
+        #send{
+            box-shadow: 1px 1px 8px 1px rgba(0,0,0,.8);
+            padding: 8px;
+            border: none;
+            margin-left: 60px;
+        }
+        #send:hover{
+            background-color: rgb(219, 219, 219);
+        }
+        .footer{
+            width: 100%;
+            height: 9em;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p > a{
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div><h1>Flexbox Blog</h1></div>
+            <!-- <div>
+            <nav>
+                <p><a href="#home">Home</a></p>
+                <p><a href="#blog">Blog</a></p>
+                <P> <a href="#contact">Contact</a></P>
+            </nav>
+            </div> -->
+            <div class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <div class="fbg">
+                <h1>Flexblog Gems</h1>
+                <h3>Learn everything about Flexbox</h3>
+            </div>
+        </div>
+        <div class="blog" id="blog">
+            <div class="blog-p">
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>First Post</h4>
+                    <p>This is an example post</p>
+                </div>
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Second Post</h4>
+                    <p>This is an example post</p>
+                </div>
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Third Post</h4>
+                    <p>This is an example post</p>
+                </div>
+            </div>
+            <div class="blog-p">
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Fourth Post</h4>
+                    <p>This is an example post</p>
+                </div>
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Fifth Post</h4>
+                    <p>This is an example post</p>
+                </div>
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Sixth Post</h4>
+                    <p>This is an example post</p>
+                </div>
+            </div>
+            <div class="blog-p">
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Seventh Post</h4>
+                    <p>This is an example post</p>
+                </div>
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Eighth Post</h4>
+                    <p>This is an example post</p>
+                </div>
+                <div class="blogs">
+                    <img src="720X480.jpg" alt="720*480">
+                    <h4>Ninth Post</h4>
+                    <p>This is an example post</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <form action="nithinsandilyab@gmail.com" method="get">
+                <label for="name">Name</label><br>
+                <input type="text" id="name">
+                <br><br><br>
+                <label for="email">Email</label><br>
+                <input type="text" id="email">
+                <br><br><br>
+                <label for="msg">Message</label><br>
+                <textarea name="msg" id="msg" cols="20" rows="8"></textarea><br>
+                <br><br>
+                <a href="nithinsandilyab@gmail.com" target="_blank"><input type="button" id="send" value="Send"></a>
+                <br><br><br>
+            </form>
+        </div>
+        <div class="footer">
+            <p><a href="#home">Home</a></p>
+            <p><a href="#blog">Blog</a></p>
+            <P> <a href="#contact">Contact</a></P>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
